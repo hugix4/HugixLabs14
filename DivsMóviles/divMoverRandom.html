@@ -1,0 +1,41 @@
+<html>
+	<body>
+	<style type="text/css">
+body{
+  background:blue;
+}
+#color{
+  background:green;
+}
+#color2{
+  background-color:#b34512;
+}
+#dmove{
+  position:absolute;
+  background-color:#0cf00c;
+  top:100px;
+  left:150px;  
+}
+</style>
+
+<script>
+function mover(uno){   
+  var divmover=document.getElementById('dmove');
+  var escala=Math.random()*uno;
+  //alert('Mover '+parseInt((divmover.style.top)-40)+'px');
+  divmover.style.top=parseInt(divmover.style.top-Math.random()*escala)+'px';
+  //divmover.style.left=divmover.offsetLeft+dos;
+}
+
+function genera(){
+  document.getElementById("dmove").innerHTML=Math.random()*10;
+  }
+  </script>
+		Hola Mundo<br/><br/>
+		<div id="color">Un color</div>
+		<div id="color2">Otro color</div>
+		<div id="dmove">Esto se moverá</div><br/>
+		<input type="button" value="Generar#" onclick="genera();"/>
+		<input type="button" value="Mover" onclick="mover(444);"/>
+	</body>
+</html>

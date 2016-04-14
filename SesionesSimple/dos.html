@@ -1,0 +1,15 @@
+<?php
+session_start();
+$_SESSION['usuario']=$_POST['campousuario'];
+$_SESSION['clave']=$_POST['campoclave'];
+?>
+<html>
+<head>
+<title>Problema</title>
+</head>
+<body>
+Se almacenaron dos variables de sesión.<br><br>
+<a href="tres.html">Ir a la tercer página donde se recuperarán 
+las variables de sesión</a>
+</body>
+</html> 

@@ -1,0 +1,10 @@
+<?php
+	session_start();
+	
+	if($_session["Estado"]!="Ok")
+		header("Location:index.php");
+?>
+
+<?php
+	echo("Hola".$_post["txt_nombre"]);
+?>
